@@ -1,0 +1,162 @@
+.logo img {
+    width: 7rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    background: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 20;
+    height: 6rem;
+}
+
+
+.headerLinks a {
+    text-decoration: none;
+    margin: 1rem;
+    color: black;
+    font-weight: bold;
+    transition: .5s;
+}
+
+.headerLinks a:hover {
+    color: var(--seaGreen);
+}
+
+.aEnroll {
+    display: none;
+}
+
+.enroll {
+    padding: 1rem;
+    background-color: var(--seaGreen);
+    display: flex;
+    align-items: center;
+    border-radius: .5rem;
+    transition: .5s;
+    gap: 9px;
+}
+
+.enroll button {
+    color: white;
+    border: none;
+    font-weight: bold;
+    background: none;
+}
+
+.enroll:hover {
+    box-shadow: 0px 0px 47px 9px rgba(45, 255, 196, 0.9);
+}
+
+/* hamburger css */
+
+.hamburger-container {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger-line {
+    width: 100%;
+    border-radius: 3px;
+    height: 3px;
+    background-color: #000;
+    transition: transform 0.3s ease;
+}
+
+
+.hamburger-container.cross .hamburger-line:nth-child(1) {
+
+    transform: rotate(46deg);
+    transform-origin: 25%;
+}
+
+.hamburger-container.cross .hamburger-line:nth-child(2) {
+    visibility: hidden;
+}
+
+.hamburger-container.cross .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg);
+    transform-origin: 0%;
+}
+
+
+
+
+
+
+@media(max-width:800px) {
+    .hamburger-container {
+        display: flex;
+    }
+
+    body{
+        padding: 0;
+    }
+
+    .headerLinks {
+        display: none;
+    }
+
+    .enroll {
+        display: none;
+    }
+
+    .headerLinks.cross {
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(45deg, black, gray);
+        position: absolute;
+        margin-top: 29rem;
+        width: 81%;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 1rem;
+        z-index: 10;
+    }
+
+    .headerLinks.cross a {
+        color: white;
+        transition: .5s;
+        font-weight: bold;
+    }
+
+    .headerLinks.cross a:hover {
+        color: var(--seaGreen);
+
+    }
+
+
+    .aEnroll {
+        padding: 1rem;
+        background-color: var(--seaGreen);
+        display: flex;
+        align-items: center;
+        border-radius: .5rem;
+        transition: .5s;
+        gap: 9px;
+    }
+
+    .aEnroll button {
+        color: white;
+        border: none;
+        font-weight: bold;
+        background: none;
+    }
+
+    .aEnroll:hover {
+        box-shadow: 0px 0px 47px 9px rgba(45, 255, 196, 0.9);
+    }
+
+}
